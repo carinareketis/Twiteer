@@ -8,7 +8,6 @@ textarea.addEventListener('keyup', caracteres);
 
 
 function caracteres() {
-    //console.log("digitei")
     var current = document.getElementById('message').value.length;
     let valor = 140 - current;
     document.getElementById('cont').innerHTML = valor;
