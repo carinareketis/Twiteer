@@ -5,14 +5,14 @@ Desafio Twitter Laboratoria
 
 Versão 0.0.1
 
-    Crie um formulário que permita inserir um texto e um botão para "twittar".
+    Crie um formulário que permita inserir um texto e um botão para "tweetar".
     Adicione um evento de click ao botão ou de submit no formulário.
     No evento, obter o texto.
     Adicione o texto ao HTML.
 
 Versão 0.0.2
 
-    Não inserir texto vazio (desativar o botão "twittar").
+    Não inserir texto vazio (desativar o botão "tweetar").
     Conte o número de caracteres de forma regressiva.
 
 Versão 0.0.3
