@@ -1,54 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Twitter</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-  </head>
-  <body>
-    <nav id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn fas fa-times" onclick="closeNav()"></a>
-      <a href="#" class="fas fa-user-circle"></a>
-      <a href="#" class="fas fa-home"></a>
-      <a href="#" class="fas fa-list-alt"></a>
-      <a href="#"class="fab fa-slack-hash"></a>
-      <a href="#"class="fas fa-chart-pie"></a>
-      <a href="#"class="fas fa-power-off"></a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Twitter</title>
+  <link href="src/css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="src/image/favicon.ico" type="imagem / x-ícone">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/39d22ebe01.js"></script>
+</head>
+
+<body>
+  <section class="wrapper fadeInDown" id="hide-session">
+    <div id="formContent">
+      <figure class="fadeIn first">
+        <img src="src/image/twitter-logo.png" id="icon" alt="Logo Twitter" />
+      </figure>
+      <input type="text" class="fadeIn label" placeholder="Insira seu nome de usuário:">
+      <input type="text" id="name" class="fadeIn name" placeholder="">
+      <input type="submit" id="btn-login" class="fadeIn fourth" value="Entrar">
+    </div>
+  </section>
+  <header>
+    <nav class="navbar">
+      <a class="navbar fab fa-twitter"></a>
     </nav>
-    <article id="main">
-      <nav class="menu" >
-        <button class="openbtn fas fa-bars" onclick="openNav()"></button>
-        <button  href="#" class="openbtn fab fa-twitter"></button>
-        <button  href="#" class="openbtn fab fa-slack-hash"></button>
-        <button  href="#" class="openbtn fas fa-bell"></button>
-        <button  href="#" class="openbtn fas fa-envelope"></button>
-      </nav>
-      <section class="fundobranco">                 
-        <p class="p">Tweetar</p>
-        <span id="cont">140</span><br>
-        <form id="form-adiciona" action="" method="get" class="container">
-          <br>
-          <textarea class="textarea campo" onkeyup="caracteres()" id="message" name="message" type="text" placeholder="O que está acontecendo?"></textarea>
-          <br>
-          <input type="submit" id="adicionar-tweet" class="btntweetar" value="Tweetar"></input>
-        </form><br><br>
-        <section class="post">
-          <table>
-            <tbody id="table-posts">
-              <tr class="posts" id="first-message">
-                <td onload="time()"><span id="txt"></span></td>
-                <td class="my-posts"></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+  </header>
+  <main class="container-fluid gedf-wrapper">
+    <section class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <h6 class="h6 text-muted">Perfil</h6>
+              <h5 class="h5 cont" id="print-user"></h5>
+            </li>
+            <li class="list-group-item">
+              <h6 class="h6 text-muted">Seguidores</h6>
+              <h5 class="h5">374</h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="col-md-6 gedf-main">
+        <div class="card gedf-card">
+          <header class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
+                  aria-controls="posts" aria-selected="true">Tweet</a>
+              </li>
+            </ul>
+          </header>
+          <section class="card-body">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                <form class="form-group">
+                  <label class="sr-only" for="message">post</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="O que está acontecendo?"></textarea>
+                </form>
+              </div>
+            </div>
+            <div class="btn-toolbar justify-content-between">
+              <div class="btn-group">
+                <input type="submit" id="btn-tweet" class="btn btn-primary" value="Tweetar"></input>
+              </div>
+              <span class="count" id="color">140</span>
+            </div>
+          </section>
+        </div>
+        <article id="add-posts"></article>
       </section>
-    </article>
-    <script src="script.js"></script>
-    <script src="form.js"></script>
-  </body>
+      <aside class="col-md-3">
+        <div class="card gedf-card">
+          <div class="card-body">
+            <h5 class="card-title">Amigos</h5>
+            <h6 class="card-subtitle mb-2 text-muted">195 amigos</h6>
+            <figure class="image-profile">
+              <img src="src/image/image-profile.png" alt="Imagem perfil amigos">
+            </figure>
+            <a href="#formContent" class="card-link">Encontrar amigos</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="src/js/script.js"></script>
+</body>
+
 </html>
