@@ -1,3 +1,6 @@
+# Resultado final
+![Twitter](https://github.com/carinareketis/Twitter/blob/master/Twitter.gif)
+
 # Twitter
 Desafio Twitter Laboratoria
 
@@ -34,10 +37,8 @@ Versão 0.0.6 (Hacker edition)
 
     Adicione a hora em que o tweet foi publicado no formato de 24 horas hh:mm.
 
-## Linguagens utilizadas:
+## Tecnologias utilizadas:
    Javascript, Bootstrap, CSS
-   
-  ## Resultado final:
   
   
    
