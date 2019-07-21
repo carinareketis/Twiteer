@@ -69,7 +69,7 @@ function insertTweet() {
             </div>
             <div class="card gedf-card">
                 <article class="card-body">
-                    <div class="text-muted h7 mb-2" id="date"><i class="fa fa-clock-o">${date}</i></div>
+                    <div class="text-muted h7 mb-2" id="date"><i class="fa fa-clock-o"> ${date}</i></div>
                     <p class="card-text">${content}</p>
                 </article>
             </div>
