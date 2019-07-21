@@ -1,8 +1,5 @@
-# Twiteer
-Desafio Twiteer Laboratoria
-
-## Objetivo
-Replicar o feed de notícias do Twitter
+# Twitter
+Desafio Twitter Laboratoria
 
 ## Critérios:
 
